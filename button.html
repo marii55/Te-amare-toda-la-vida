@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #ed98c3;
+            font-family: Arial, sans-serif;
+        }
+
+        #btn {
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #f5afaf;
+            background-color: #e84b70;
+            border: 2px solid #f6f4f4;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #btn.clicked {
+            display: none;
+        }
+
+        #imagen {
+            display: none;
+            max-width: 100%;
+            margin-top: 20px;
+        }
+
+        .quote {
+            color: #ffffff;
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+    <script>
+        function mostrarImagen() {
+            var imagen = document.getElementById("imagen");
+            var btn = document.getElementById("btn");
+            var quote = document.getElementsByClassName("quote")[0];
+            imagen.style.display = "block";
+            btn.classList.add("clicked");
+            quote.style.display = "block";
+        }
+    </script>
+
+</head>
+<body>
+    <h3>Te amo mucho</h3>
+    <a href="watch.html">
+        <img id="imagen" src="./imagenes/teamo.jpg" alt="imagen blanca">
+    </a>
+    <p class="quote">No conozco la receta de la felicidad, pero sé que te incluye a ti.</p>
+    <button id="btn" onclick="mostrarImagen()">Confía en mí</button>
+</body>
+</html>
+
